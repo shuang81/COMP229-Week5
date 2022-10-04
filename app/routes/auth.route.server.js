@@ -1,15 +1,20 @@
 import { Router } from "express";
+import { DisPlayLoginPage, 
+        DisPlayRegisterPage, 
+        ProcessLoginPage, 
+        ProcessRegisterPage, 
+        ProcessLogoutPage } from "../controllers/auth.controller.server.js";
 
 const router = Router();
 
 //Display Login Page
-router.get('/login', DisplayLoginPage);
+router.get('/login', DisPlayLoginPage);
 //Process Login Page
 router.post('/login', ProcessLoginPage);
 
 
 //Display Registration Page
-router.get('/register', DisplayRegisterPage);
+router.get('/register', DisPlayRegisterPage);
 //Process Registration Page
 router.post('/register', ProcessRegisterPage);
 

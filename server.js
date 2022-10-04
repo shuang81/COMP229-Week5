@@ -67,7 +67,7 @@ app.use(flash());
 
 //Auth Step 6 - Initialize Passport and Session
 app.use(passport.initialize());
-app.user(passport.session());
+app.use(passport.session());
 
 //Step 7 - Implementing the Auth Strategy
 passport.use(User.createStrategy());
