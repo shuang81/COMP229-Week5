@@ -1,0 +1,9 @@
+// {
+//     "editor.semanticTokenColorCustomizations": {
+//         "enabled": true, // enable semantic highlighting for all themes
+//         "rules": {
+//             "*.readonly": { "foreground": "#9cdcfe" },
+//             "*.declaration": { "foreground": "#9cdcfe" }
+//         }
+//     }
+// }
