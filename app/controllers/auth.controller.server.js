@@ -11,7 +11,7 @@ import { UserDisplayName } from '../utils/index.js';
 //If the user is not login, it will load the page
 export function DisPlayLoginPage(req, res, next){
     if(!req.user){
-        return res.render('index', {title: 'Login', page: 'login', messages: req.flash('loginMessage') })
+        return res.render('index', {title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: UserDisplayName(req) })
     }
     //else redirect to /movie-list
     return res.redirect('/movie-list');
@@ -19,7 +19,7 @@ export function DisPlayLoginPage(req, res, next){
 
 export function DisPlayRegisterPage(req, res, next){
     if(!req.user){
-        return res.render('index', {title: 'Register', page: 'register', messages: req.flash('registerMessage') })
+        return res.render('index', {title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayName(req) })
     }
     return res.redirect('/movie-list');
 }
